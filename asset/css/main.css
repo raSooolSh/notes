@@ -1,0 +1,230 @@
+:root{
+    --bg-img:url(../img/moon.jpg);
+    --clr-primary:#333;
+    --clr-btn:rgb(215, 14, 233);
+    --clr-bg:#0e0e0e;
+    --clr-text:#f4f4f4;
+    --clr-text-opc:#f4f4f480;
+}
+body.light{
+    --bg-img:url(../img/light.jpg);
+    --clr-primary:#f4f4f4;
+    --clr-bg:#b8b8b8;
+    --clr-text:#333;
+}
+/* rest */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* utility */
+.col-1{
+    width: 10%;
+}
+.col-2{
+    width: 20%;
+}
+.col-3{
+    width: 30%;
+}
+.col-4{
+    width: 40%;
+}
+.col-5{
+    width: 50%;
+}
+.col-6{
+    width: 60%;
+}
+.col-7{
+    width: 70%;
+}
+.col-8{
+    width: 80%;
+}
+.col-9{
+    width: 90%;
+}
+.col-10{
+    width: 100%;
+}
+.container{
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+body{
+    background-color: var(--clr-bg);
+    color: var(--clr-text);
+}
+
+#header{
+    z-index: 0;
+    position: absolute;
+    width: 100%;
+    height: 500px;
+    background: linear-gradient(to right,rgba(100, 53, 230, 0.5),rgba(215, 14, 233, 0.5)),var(--bg-img) top center/cover;
+    display: flex;
+    padding: 5rem;
+    justify-content: space-around;
+    align-items:baseline;
+}
+#switchBtn{
+    font-size: 3rem;
+    width: 60px;
+    height: 60px;
+}
+#main {
+    position: relative;
+    margin: auto;
+    top: 220px;
+}
+button{
+    color: var(--clr-text);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.card{
+    border-radius: 25px;
+    margin: auto;
+    display: flex;
+    max-width: 600px;
+    padding: 1.8rem;
+    align-items: center;
+    background-color: var(--clr-primary);
+}
+.card i {
+    font-size: 2rem;
+}
+.card input {
+    color: var(--clr-text);
+    width: 100%;
+    border: none;
+    background: none;
+    padding: 0.2rem;
+    font-size: 1.6rem;
+}
+.card input:focus {
+    outline: none;
+}
+.card button{
+    width: 45px;
+    height: 45px;
+    line-height: 15px;
+    border-radius: 50%;
+    transition: all 0.5s;
+}
+.card button:hover{
+    background-color: var(--clr-btn);
+}
+.todos{
+    margin-top: 60px;
+}
+#todo-list{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+}
+.todo-item{
+    font-size: 1.4rem;
+    cursor:move;
+    padding: 1.2rem 0;
+    border-bottom: var(--clr-text-opc) 1px solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.todo-item p{
+    margin: 0 0.6rem;
+}
+.btn-remove{
+    transform: rotateZ(45deg);
+}
+.todo-item.dragging{
+    opacity: 0.5;
+}
+footer{
+    margin-top: 1rem;
+    position: relative;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer p {
+    color: var(--clr-text);
+    font-size: 1.4rem;
+    text-align: justify;
+}
+.bi-check2-circle{
+    color: greenyellow;
+}
+.todo-delete{
+    animation:delete 0.5s ease-in;
+    transition: display 1s linear ;
+}
+
+@keyframes delete {
+    20%{
+        transform: rotateX(20deg);
+    }
+    50%{
+        transform: rotateX(45deg);
+        opacity: 0.5;
+    }
+    70%{
+        transform: rotateX(75deg);
+    }
+    100%{
+        transform: rotateX(90deg);
+        opacity: 0;
+    }
+}
+@media screen and (max-width : 500px) {
+    .container{
+        max-width: 85vw;
+    }
+    .todo-item{
+        text-align: center;
+    }
+    .card input {
+        text-align: center;
+    }
+}
+@media screen and (min-width : 500px) {
+    .container{
+        max-width: 90vw;
+    }
+}
+@media screen and (min-width : 768px) {
+    .container{
+        max-width: 700px;
+    }
+}

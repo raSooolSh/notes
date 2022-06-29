@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./asset/css/main.css">
+</head>
+
+<body>
+    <div id="header">
+        <h1>لیست وظایف</h1>
+        <button id="switchBtn" type='button'>
+            <i class="bi bi-brightness-high"></i>
+        </button>
+    </div>
+    <div id="main">
+        <div class="container">
+        <div class="card">
+            <div class="col-1">
+                <button type="button" id="addBtn">
+                    <i class="bi bi-plus-lg"></i>
+                </button>
+            </div>
+
+            <div class="col-9">
+                <input id="jobInput" type="text" placeholder="افزودن وظیفه جدید...">
+            </div>
+        </div>
+        <div class="todos card">
+            <ul id="todo-list">
+
+            </ul>
+        </div>
+    </div>
+    <footer>
+        <p>می توانید با کشیدن و رها کردن وظایف ترتیب آنها را تغییر دهید.</p>
+    </footer>
+    </div>
+    
+
+    <script src="./asset/js/main.js"></script>
+</body>
+
+</html>
